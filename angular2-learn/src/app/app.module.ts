@@ -12,6 +12,11 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add/shopping-list-add.component';
 import {LogService} from "./service/log.service";
+import {routing} from "./app.routing";
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import {RecipeService} from "./service/recipe.service";
+import {ShoppingListService} from "./service/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -23,14 +28,17 @@ import {LogService} from "./service/log.service";
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListComponent,
-    ShoppingListAddComponent
+    ShoppingListAddComponent,
+    RecipeEditComponent,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [LogService],
+  providers: [LogService,RecipeService,ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
