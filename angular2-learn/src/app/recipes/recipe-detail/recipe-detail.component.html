@@ -5,7 +5,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{selectedRecipe?.name}}</h1>
+    <h1>{{selectedRecipe?.name | uppercase}}</h1>
   </div>
   <div class="col-xs-12">
     <button class="btn btn-success" (click)="onAddToShoppingList()">To Shopping List</button>
@@ -16,7 +16,7 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <p>{{selectedRecipe?.description}}</p>
+    <p>{{selectedRecipe?.description }}</p>
   </div>
 </div>
 <div class="row">
